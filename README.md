@@ -79,7 +79,7 @@ Dataset used:
 
 Download from Kaggle:
 
-https://www.kaggle.com/datasets/salader/dogs-vs-cats
+https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset
 
 ---
 
