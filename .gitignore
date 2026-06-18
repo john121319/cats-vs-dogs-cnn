@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.keras
+# Local data splits and temporary media assets
+data/
+datasets/
+train/
+validation/
+test_images/
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.zip
+
+# Model checkpoints and weights
+*.keras
+*.h5
+*.pt
+*.pth
+saved_model/
+
+# macOS system files and IDE configurations
+.DS_Store
+.vscode/
