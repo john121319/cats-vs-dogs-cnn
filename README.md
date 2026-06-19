@@ -91,12 +91,14 @@ Input (224x224x3) ──► ResNet50 (Frozen) ──► GlobalAvgPooling ──�
 ### Environment Replication
 This project was built and tested on an M1 Mac using a clean Python 3.10 environment to prevent library dependency conflicts and ensure native Apple Silicon GPU acceleration support.
 
-```bash
 # Set up a clean virtual workspace using Conda
+```bash
 conda create -n env_cats_dogs python=3.10 -y
 conda activate env_cats_dogs
+```
 
 # Install required framework versions
+```bash
 pip install -r requirements.txt
 ```
 
