@@ -66,24 +66,7 @@ To evaluate how well a model trained on millions of natural images transfers to 
 Input (224x224x3) ──► ResNet50 (Frozen) ──► GlobalAvgPooling ──► Dense(128) ──► Dropout(0.5) ──► Dense(1, Sigmoid)
 ```
 
----
-
-## 4. Model Comparison
-
-| Model | Accuracy | Loss |
-|------|----------|------|
-| CNN Baseline | 83.41% | 0.5558 |
-| ResNet50 Transfer Learning | 99.12% | 0.0229 |
-
-The ResNet50 transfer learning model significantly outperformed the custom CNN baseline. This shows that pretrained deep learning models can extract more powerful image features and achieve higher accuracy with less training time.
----
-
-
-
-
-
-
-## Model Evaluation & Performance
+## 4. Model Evaluation & Performance
 
    We evaluated the custom **CNN Baseline** model against a **ResNet50 Transfer Learning** model using an independent test dataset of 2,495 images (evenly distributed between cats and dogs). 
 
@@ -102,22 +85,6 @@ The ResNet50 transfer learning model significantly outperformed the custom CNN b
    * **Error Analysis:** * The **CNN Baseline** struggled with classification balance, misclassifying 250 dogs as cats and 164 cats as dogs.
    * The **ResNet50** model proved highly robust, misclassifying **only 22 images total** out of the entire test set of nearly 2,500 samples.
    * **Trade-off:** ResNet50 requires significantly more computational time to evaluate (~72 seconds vs ~4 seconds), but the dramatic drop in error rate completely justifies the overhead for production use.
-
-   ### How to Run the Evaluation
-   To re-run model testing, generate the classification reports, and output the confusion matrix plots to the `results/` directory, execute:
-
-   ```bash
-   python evaluate_models.py
-
-
-
-
-
-
-
-
-
-
 
 ## 5. Setting Up and Running the Code
 
