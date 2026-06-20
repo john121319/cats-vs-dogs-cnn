@@ -70,7 +70,7 @@ Input (224x224x3) ──► ResNet50 (Frozen) ──► GlobalAvgPooling ──�
 
    We evaluated the custom **CNN Baseline** model against a **ResNet50 Transfer Learning** model using an independent test dataset of 2,495 images (evenly distributed between cats and dogs). 
 
-   ## Performance Summary
+   ### Performance Summary
 
    | Model Architecture | Test Accuracy | Test Loss | Evaluation Speed |
    | :--- | :---: | :---: | :---: |
@@ -78,8 +78,15 @@ Input (224x224x3) ──► ResNet50 (Frozen) ──► GlobalAvgPooling ──�
    | **ResNet50 Transfer Learning** | **99.12%** | **0.0229** | 906 ms/step (~72s total) |
 
    ---
+   #### Confusion Matrix
+   
+   <img width="640" height="480" alt="cnn_baseline_confusion_matrix" src="https://github.com/user-attachments/assets/f54d4b28-98de-486b-897c-6d654b4851ac" />
 
-   ## Key Findings
+   <img width="640" height="480" alt="resnet50_transfer_confusion_matrix" src="https://github.com/user-attachments/assets/caa8f1ae-0b58-4a11-adee-d9aff1edff9f" />
+
+
+
+   ### Key Findings
 
    * **The Power of Transfer Learning:** Switching to ResNet50 yielded a massive **~15.7% absolute increase in accuracy** and reduced the cross-entropy loss to near zero.
    * **Error Analysis:** * The **CNN Baseline** struggled with classification balance, misclassifying 250 dogs as cats and 164 cats as dogs.
