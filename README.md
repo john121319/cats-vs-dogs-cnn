@@ -132,41 +132,10 @@ This approach allows the model to reuse powerful visual features learned from a 
 
 ---
 
-<<<<<<< HEAD
-   ### Performance Summary
-=======
 ### Approach C: ResNet50 with Data Augmentation and Fine-Tuning
->>>>>>> ec3cf49 (Update README and add Grad-CAM fine-tuning results)
 
 The final model improves the transfer learning approach by adding data augmentation and fine-tuning selected ResNet50 layers.
 
-<<<<<<< HEAD
-   ---
-   #### Confusion Matrix
-   
-   <img width="640" height="480" alt="cnn_baseline_confusion_matrix" src="https://github.com/user-attachments/assets/f54d4b28-98de-486b-897c-6d654b4851ac" />
-
-   <img width="640" height="480" alt="resnet50_transfer_confusion_matrix" src="https://github.com/user-attachments/assets/caa8f1ae-0b58-4a11-adee-d9aff1edff9f" />
-
-
-
-   ### Key Findings
-
-   * **The Power of Transfer Learning:** Switching to ResNet50 yielded a massive **~15.7% absolute increase in accuracy** and reduced the cross-entropy loss to near zero.
-   * **Error Analysis:** * The **CNN Baseline** struggled with classification balance, misclassifying 250 dogs as cats and 164 cats as dogs.
-   * The **ResNet50** model proved highly robust, misclassifying **only 22 images total** out of the entire test set of nearly 2,500 samples.
-   * **Trade-off:** ResNet50 requires significantly more computational time to evaluate (~72 seconds vs ~4 seconds), but the dramatic drop in error rate completely justifies the overhead for production use.
-
-## 5. Setting Up and Running the Code
-
-### Environment Replication
-This project was built and tested on an M1 Mac using a clean Python 3.10 environment to prevent library dependency conflicts and ensure native Apple Silicon GPU acceleration support.
-
-# Set up a clean virtual workspace using Conda
-```bash
-conda create -n env_cats_dogs python=3.10 -y
-conda activate env_cats_dogs
-=======
 ```text
 Input (224x224x3)
         ↓
@@ -181,7 +150,6 @@ GlobalAveragePooling2D
 Dense(128) + Dropout(0.5)
         ↓
 Dense(1, Sigmoid)
->>>>>>> ec3cf49 (Update README and add Grad-CAM fine-tuning results)
 ```
 
 After training the classification head, I fine-tuned the final ResNet50 layers using a very small learning rate. This helped the model adapt pretrained ImageNet features to the cat/dog classification task.
