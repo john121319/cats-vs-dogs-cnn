@@ -16,7 +16,6 @@ dog-cat-classification/
 ├── README.md
 ├── requirements.txt
 ├── evaluate_models.py
-├── evaluate_detailed.py
 │
 ├── data/
 │   ├── train/
@@ -180,7 +179,7 @@ I evaluated the models using an independent test dataset of 2,495 images, evenly
 
 ## 5. Detailed Evaluation Results
 
-I used `evaluate_detailed.py` to calculate precision, recall, F1-score, and confusion matrices.
+I used `evaluate_models.py` to calculate precision, recall, F1-score, and confusion matrices.
 
 ### CNN Baseline Classification Report
 
@@ -299,7 +298,7 @@ python evaluate_models.py
 ### Step 7: Generate Detailed Evaluation Reports
 
 ```bash
-python evaluate_detailed.py
+python evaluate_models.py
 ```
 
 This script prints:
