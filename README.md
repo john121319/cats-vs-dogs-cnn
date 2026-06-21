@@ -66,7 +66,7 @@ The raw dataset and trained `.keras` model files are stored locally and ignored 
 Public image datasets often contain corrupted, unreadable, grayscale, or non-RGB images. These issues can cause TensorFlow training to crash during image loading or preprocessing.
 
 ### source of dataset
-**[Download the Cats and Dogs Classification Dataset on Kaggle](https://kaggle.com)**
+**[Download the Cats and Dogs Classification Dataset on Kaggle](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)**
 
 ### Cleaning Script
 
